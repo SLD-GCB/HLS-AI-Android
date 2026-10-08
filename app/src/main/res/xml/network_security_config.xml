@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  网络安全策略：**默认禁止明文 HTTP**（防止密钥/内容以明文过网）。
+  只对本机环回（本地 ollama / LM Studio、模拟器访问主机）放行明文。
+  需要连局域网里的明文服务（如另一台机器上的 ollama）时，把它的地址加进下面的 domain。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

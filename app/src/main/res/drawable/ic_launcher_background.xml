@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 图标底色：一块铺满 108dp 的纯红。用 drawable（而不是 color 资源）——
+     有些桌面解析不了"颜色背景"，会自己生成一块按主色调来的浅色底板，就露出了一圈杂色。 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/ic_launcher_background" />
+</shape>

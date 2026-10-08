@@ -25,3 +25,41 @@ replay_pid*
 
 # Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+
+
+# ══════════════════════════════════════════════════════════════════
+# 以下是本工程（Android）需要补的规则
+# ══════════════════════════════════════════════════════════════════
+
+# ⚠⚠ 最重要的一条：签名密码 + 私钥，**绝对不能提交** ⚠⚠
+# local.properties 里存着 RELEASE_STORE_PASSWORD / RELEASE_KEY_PASSWORD 的**明文**
+local.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+keystore/
+
+# 构建产物
+build/
+.gradle/
+.cxx/
+.externalNativeBuild/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+
+# IDE / 本机配置
+.idea/
+*.iml
+
+# 上面的 `*.jar` 会误伤 Gradle wrapper 的 jar —— 那个必须留在仓库里，
+# 否则别人 clone 下来连 `gradlew` 都跑不了。
+!gradle/wrapper/gradle-wrapper.jar
+
+# 本地模型（几百 MB 起步，不进仓库）
+模型/
+*.gguf
