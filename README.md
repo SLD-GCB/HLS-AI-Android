@@ -8,9 +8,12 @@
 它是 PC 端桌面应用「**ai酒馆**」（Python + PySide6）的安卓移植，功能对齐，并针对手机做了适配。
 
 > PC 端源码：https://github.com/SLD-GCB/HLS-ai-orginal-code
+
 > PC 端发行版：https://github.com/SLD-GCB/HLS-AI-Windows
 
 请在使用这个项目之前先到PC端发行版的项目地址里下载，并且使用如图所示功能：
+
+新版本新增局域网模型聊天功能，但是剥离了原有的本地模型运行功能，因算力不足舍弃手机端
 
 <img width="426" height="203" alt="屏幕截图 2026-10-13 115232" src="https://github.com/user-attachments/assets/79949bd0-0118-4407-af2e-63078f41fba7" />
 
